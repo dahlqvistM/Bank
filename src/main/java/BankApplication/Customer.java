@@ -28,7 +28,7 @@ public class Customer {
 	}
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	public Integer getCustomerId(){
 		return this.customerId;
 	}
@@ -50,6 +50,9 @@ public class Customer {
 	
 	public String getAddress(){
 		return this.address;
+	}
+	public void setCustomerId(Integer customerId){
+		this.customerId=customerId;
 	}
 	
 	public void setSsn(Integer ssn){
