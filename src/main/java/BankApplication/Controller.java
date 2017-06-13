@@ -18,7 +18,7 @@ public class Controller {
 		return "Welcome to the Bank";
 	}
 	
-	@RequestMapping("/bank/login")
+	@RequestMapping("/bank/login")	
 	public @ResponseBody String login(@RequestParam Integer customerId, @RequestParam String password){
 		Customer customer = new CustomerManager().getCustomer(customerId);
 		return "Welcome " + customer.getName();

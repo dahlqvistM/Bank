@@ -1,12 +1,14 @@
 package BankApplication;
 
-import javax.persistence.PersistenceContext;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+@Stateless
 public class CustomerManager {
 
+	
 	private EntityManagerFactory emf;
 	
 	private EntityManager getEntityManager(){

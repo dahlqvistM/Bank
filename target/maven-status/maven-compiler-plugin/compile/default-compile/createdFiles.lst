@@ -1,3 +1,4 @@
 BankApplication\Controller.class
 BankApplication\CustomerManager.class
 BankApplication\Customer.class
+BankApplication\AccountManager.class
