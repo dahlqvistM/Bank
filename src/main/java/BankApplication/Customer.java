@@ -1,13 +1,18 @@
 package BankApplication;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
+
 
 @Entity
-public class Customer {
+public class Customer implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private Integer customerId;
 	private Integer ssn;
 	private String username;
@@ -16,7 +21,9 @@ public class Customer {
 	private String address;
 	
 	
-	public Customer(){}
+	public Customer(){
+		super();
+	}
 	
 	public Customer(Integer customerId, Integer ssn, String username, String password, String name, String address){
 		this.customerId=customerId;
@@ -27,8 +34,16 @@ public class Customer {
 		this.address=address;
 	}
 	
+	public Customer(Integer ssn, String username, String password, String name, String address){
+		this.ssn=ssn;
+		this.username=username;
+		this.password=password;
+		this.name=name;
+		this.address=address;
+	}
+	
 	@Id
-	//@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	public Integer getCustomerId(){
 		return this.customerId;
 	}

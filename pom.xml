@@ -130,6 +130,13 @@
 				<artifactId>maven-jetty-plugin</artifactId>
 				<version>6.1.10</version>
 				<configuration>
+			          <systemProperties>
+			            <systemProperty>
+			              <name>logback.configurationFile</name>
+			              <value>./src/etc/logback.xml</value>
+			            </systemProperty>
+			          </systemProperties>
+      
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<connectors>
 						<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
@@ -138,6 +145,13 @@
 						</connector>
 					</connectors>
 				</configuration>
+				     <dependencies>
+			          <dependency>
+			            <groupId>ch.qos.logback</groupId>
+			            <artifactId>logback-classic</artifactId>
+			            <version>0.9.15</version>
+			          </dependency>
+			        </dependencies>
 			</plugin>
 		</plugins>
 	</build>

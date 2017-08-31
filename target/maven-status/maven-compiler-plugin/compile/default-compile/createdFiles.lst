@@ -1,4 +1,5 @@
-BankApplication\Controller.class
 BankApplication\CustomerManager.class
-BankApplication\Customer.class
+BankApplication\HomeController.class
 BankApplication\AccountManager.class
+BankApplication\TesterController.class
+BankApplication\Customer.class
